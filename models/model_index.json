@@ -1,0 +1,19 @@
+{
+    "repoName": "Rido's models",
+    "lastUpdate": "2020-08-26",
+    "models": [
+        {
+            "id": "com:example:Thermostat",
+            "version": 1,
+            "dtmi": "dtmi:com:example:Thermostat;1",
+            "url": "https://raw.githubusercontent.com/Azure/opendigitaltwins-dtdl/master/DTDL/v2/samples/Thermostat.json"
+        },
+        {
+            "id": "com:example:TemperatureController",
+            "version": 1,
+            "dtmi": "dtmi:com:example:TemperatureController;1",
+            "url": "https://raw.githubusercontent.com/Azure/opendigitaltwins-dtdl/master/DTDL/v2/samples/TemperatureController.json"
+        }
+    ]
+}
+
