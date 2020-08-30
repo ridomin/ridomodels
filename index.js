@@ -18,7 +18,7 @@ const gbid = (id) => {
  */
 const loadModels = () => {
   return new Promise((resolve, reject) => {
-    window.fetch('/model-index.json')
+    window.fetch('model-index.json')
       .then(r => r.json())
       .then(m => resolve(m.models))
       .catch(e => reject(e))
