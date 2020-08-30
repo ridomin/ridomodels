@@ -1,0 +1,28 @@
+{
+  "name": "ridomodels",
+  "version": "1.0.0",
+  "description": "This repo contains a prototype to share DTDL models using GitHub pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ridomin/ridomodels.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ridomin/ridomodels/issues"
+  },
+  "homepage": "https://github.com/ridomin/ridomodels#readme",
+  "standard": {
+    "globals": [
+      "Mustache"
+    ],
+    "ignore": [
+      "*.d.ts"
+    ]
+  }
+}
