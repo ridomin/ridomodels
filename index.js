@@ -35,6 +35,11 @@
     gbid(target).innerHTML = Mustache.render(gbid(template).innerHTML, models)
   }
 
+  /**
+   * @description "removes the dtmi prefix and the version, and replaces : with -"
+   * @param {string} dtmi
+   * @returns {string}
+   */
   const dtmi2folder = (dtmi) => {
     const parts = dtmi.toLowerCase().split(';')[0].split(':')
     parts.shift()
@@ -52,11 +57,10 @@
         models.forEach(m => {
           m.path = `models/${folder}/${m.path}`
         })
-        bindTemplate('models-list-template', models, 'rendered')
       } catch {
         models = []
-        bindTemplate('models-list-template', models, 'rendered')
       }
+      bindTemplate('models-list-template', models, 'rendered')
     }
   }
   init()
