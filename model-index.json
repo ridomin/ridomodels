@@ -17,6 +17,7 @@
             "path": "models/com-example-temperaturecontroller/tc1.json",
             "owner": "ridomin",
             "depends": [
+                "dtmi:com:example:Thermostat;1",
                 "dtmi:azure:DeviceManagement:DeviceInformation;1"
             ]
         },
