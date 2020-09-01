@@ -1,0 +1,22 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:samples:myDevice;1",
+  "@type": "Interface",
+  "extends": ["dtmi:com:samples:baseDevice;1","dtmi:com:samples:baseInterface;1"],
+  "displayName": "commonDevice",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "temperature",
+      "schema": "double"
+    },
+    {
+      "@type": "Command",
+      "name": "reboot",
+      "request": {
+        "name": "delay",
+        "schema": "integer"
+      }
+    }
+  ]
+}
