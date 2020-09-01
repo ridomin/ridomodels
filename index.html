@@ -21,8 +21,16 @@
           {{#.}}
             <li id="{{dtmi}}">
               <div>
-              <a href="{{path}}" title="{{dtmi}}" target="_blank">{{dtmi}}</a> by {{owner}}
+              <a href="{{path}}" title="{{dtmi}}" target="_blank">{{dtmi}}</a>
               </div> 
+              <div class="depends">
+                <ul>
+                  {{#depends}}
+                   <li>{{.}}</li>
+                  {{/depends}}
+                </ul>
+              </div>
+              by {{owner}}
             </li>
           {{/.}}
         </ul>
