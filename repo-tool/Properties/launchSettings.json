@@ -2,7 +2,7 @@
   "profiles": {
     "repo-tool": {
       "commandName": "Project",
-      "commandLineArgs": "C:\\code\\ridomodels\\repo-tool\\test-models\\simple\\"
+      "commandLineArgs": "C:\\code\\ridomodels\\models\\com-example-temperaturecontroller\\tc1.json"
     }
   }
 }
