@@ -10,14 +10,19 @@
 <body>
     <h1>Rido Models</h1>
     <div>
-        Renders the <a href="model-index.json">model-index.json</a> to resolve the models hosted in this repo.
+        Resolve Models using the model-manifest.json in each folder
     </div>
     <hr />
+    <div>
+      <input id="dtmiSearchBox" type="text" value="dtmi:com:example:TemperatureController;2" size="50" />
+      <button id="seachDtmiButton">Search</button>
+    </div>
     <div id="rendered">
 
     </div>
     <script id="models-list-template" type="x-tmpl-mustache">
         <ul>
+          {{^.}}not found{{/.}}
           {{#.}}
             <li id="{{dtmi}}">
               <div>

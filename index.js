@@ -17,11 +17,11 @@
   /**
    * @returns {Promise<Array<modelInfo>>}
    */
-  const loadModels = () => {
+  const loadModels = (path) => {
     return new Promise((resolve, reject) => {
-      window.fetch('model-index.json')
+      window.fetch(path)
         .then(r => r.json())
-        .then(m => resolve(m.models))
+        .then(m => resolve(m))
         .catch(e => reject(e))
     })
   }
@@ -35,9 +35,33 @@
     gbid(target).innerHTML = Mustache.render(gbid(template).innerHTML, models)
   }
 
-  const init = async () => {
-    models = await loadModels()
-    bindTemplate('models-list-template', models, 'rendered')
+  /**
+   * @description "removes the dtmi prefix and the version, and replaces : with -"
+   * @param {string} dtmi
+   * @returns {string}
+   */
+  const dtmi2folder = (dtmi) => {
+    const parts = dtmi.toLowerCase().split(';')[0].split(':')
+    parts.shift()
+    return parts.join('-')
   }
-  await init()
+
+  const init = () => {
+    const button = gbid('seachDtmiButton')
+    button.onclick = async () => {
+      const searchText = gbid('dtmiSearchBox').value
+      const folder = dtmi2folder(searchText)
+      const path = `models/${folder}/model-manifest.json`
+      try {
+        models = await loadModels(path)
+        models.forEach(m => {
+          m.path = `models/${folder}/${m.path}`
+        })
+      } catch {
+        models = []
+      }
+      bindTemplate('models-list-template', models, 'rendered')
+    }
+  }
+  init()
 })()

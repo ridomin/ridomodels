@@ -1,0 +1,7 @@
+[
+    {
+        "dtmi": "dtmi:azure:DeviceManagement:DeviceInformation;1",
+        "path": "deviceinformation.json",
+        "owner": "ridomin"
+    }
+]
