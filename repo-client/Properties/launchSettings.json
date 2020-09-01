@@ -2,7 +2,7 @@
   "profiles": {
     "repo-client": {
       "commandName": "Project",
-      "commandLineArgs": "dtmi:com:example:TemperatureController;2"
+      "commandLineArgs": "dtmi:azureiot:AzureDeviceUpdateCore;1"
     }
   }
 }

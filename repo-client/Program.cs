@@ -66,7 +66,8 @@ namespace repo_client
         static void GetModel(string dtmi)
         {
             Console.WriteLine(". . . resolving " + dtmi);
-            string url = "https://ridomin.github.io/ridomodels/";
+            //string url = "https://ridomin.github.io/ridomodels/";
+            string url = "http://127.0.0.1:5500/";
             var wc = new WebClient();
             if (modelIndex == null)
             {
