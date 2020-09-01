@@ -1,0 +1,20 @@
+[
+    {
+        "dtmi": "dtmi:com:example:TemperatureController;1",
+        "path": "tc1.json",
+        "owner": "ridomin",
+        "depends": [
+            "dtmi:com:example:Thermostat;1",
+            "dtmi:azure:DeviceManagement:DeviceInformation;1"
+        ]
+    },
+    {
+        "dtmi": "dtmi:com:example:TemperatureController;2",
+        "path": "tc2.json",
+        "owner": "ridomin",
+        "depends": [
+            "dtmi:com:example:Thermostat;1",
+            "dtmi:azure:DeviceManagement:DeviceInformation;1"
+        ]
+    }
+]

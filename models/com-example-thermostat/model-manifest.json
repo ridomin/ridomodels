@@ -1,0 +1,7 @@
+[
+    {
+        "dtmi": "dtmi:com:example:Thermostat;1",
+        "path": "thermostat.json",
+        "owner": "ridomin"
+    }
+]
