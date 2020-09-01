@@ -66,14 +66,6 @@ namespace repo_client
         static void GetModel(string dtmi)
         {
             Console.WriteLine(". . . resolving " + dtmi);
-
-            string dtmi2Folder(string dtmi)
-            {
-                var allparts = dtmi.ToLower().Split(";")[0].Split(":");
-                var parts = allparts.Skip(1);
-                return string.Join("-", parts);
-            }
-
             string url = "https://ridomin.github.io/ridomodels/";
             var wc = new WebClient();
             if (modelIndex == null)
@@ -88,8 +80,7 @@ namespace repo_client
             var root = modelIndex.models.Where(m => m.dtmi == dtmi).FirstOrDefault();
             if (!allModels.ContainsKey(dtmi))
             {
-                string folder = dtmi2Folder(dtmi);
-                allModels.Add(dtmi, wc.DownloadString(url + $"models/{folder}/{root.path}"));
+                allModels.Add(dtmi, wc.DownloadString(url + $"{root.path}"));
             }
             foreach (var d in root.depends)
             {
