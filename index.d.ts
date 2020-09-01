@@ -1,5 +1,5 @@
 type modelIndex = {
-    models: string[],
+    models: Array<modelInfo>,
     lastUpdate: string,
     repoName: string
 }
@@ -8,6 +8,6 @@ type modelInfo = {
     dtmi: string,
     path: string,
     owner: string,
-    dtdlModel: object
+    depends: Array<string>
 }
 
