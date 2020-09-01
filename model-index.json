@@ -1,0 +1,33 @@
+{
+    "repoName": "@ridomin/IoTModels",
+    "lastUpdate": "2020-08-26",
+    "models": [
+        {
+            "dtmi": "dtmi:azure:DeviceManagement:DeviceInformation;1",
+            "path": "models/azure-devicemanagement-deviceinformation/deviceinformation.json",
+            "owner": "ridomin"
+        },
+        {
+            "dtmi": "dtmi:com:example:Thermostat;1",
+            "path": "models/com-example-thermostat/thermostat.json",
+            "owner": "ridomin"
+        },
+        {
+            "dtmi": "dtmi:com:example:TemperatureController;1",
+            "path": "models/com-example-temperaturecontroller/tc1.json",
+            "owner": "ridomin",
+            "depends": [
+                "dtmi:azure:DeviceManagement:DeviceInformation;1"
+            ]
+        },
+        {
+            "dtmi": "dtmi:com:example:TemperatureController;2",
+            "path": "models/com-example-temperaturecontroller/tc2.json",
+            "owner": "ridomin",
+            "depends": [
+                "dtmi:com:example:Thermostat;1",
+                "dtmi:azure:DeviceManagement:DeviceInformation;1"
+            ]
+        }
+    ]
+}
