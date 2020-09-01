@@ -1,0 +1,13 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:ifc1;10",
+    "@type": "Interface",
+    "displayName": "Interface One",
+    "contents": [
+      { 
+        "@type" : "Property", 
+        "name" : "p1", 
+        "schema" : "string" 
+      }
+    ]    
+  }

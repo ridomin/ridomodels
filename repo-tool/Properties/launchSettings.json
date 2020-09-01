@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "repo-tool": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\code\\ridomodels\\repo-tool\\test-models\\simple\\"
+    }
+  }
+}

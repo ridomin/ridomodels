@@ -1,0 +1,23 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:compinline;1",
+    "@type": "Interface",
+    "displayName": "Interface One",
+    "contents": [
+      { 
+        "@type" : "Component", 
+        "name" : "p1", 
+        "schema": {
+          "@type": "Interface",
+          "@id": "dtmi:com:ifcinline;1",
+          "contents": [
+           { 
+               "@type" : "Property", 
+              "name" : "propInline", 
+              "schema" : "string" 
+           }
+          ]
+        }
+      }
+    ]    
+  }
