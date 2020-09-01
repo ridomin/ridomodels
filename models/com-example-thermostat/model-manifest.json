@@ -3,5 +3,18 @@
         "dtmi": "dtmi:com:example:Thermostat;1",
         "path": "thermostat.json",
         "owner": "ridomin"
+    },
+    {
+        "dtmi": "dtmi:com:rido:LocalInterface;1",
+        "path": "ridoLocal.json",
+        "owner": "ridomin"
+    },
+    {
+        "dtmi": "dtmi:com:example:Thermostat;2",
+        "path": "thermostat-v2.json",
+        "owner": "ridomin",
+        "depends" : [
+            "dtmi:com:rido:LocalInterface;1"
+        ]
     }
 ]
