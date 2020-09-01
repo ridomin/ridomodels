@@ -1,4 +1,4 @@
-(async () => {
+(() => {
   /** @type {Array<modelInfo>} models */
   let models = []
 
