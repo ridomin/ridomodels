@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Reflection.Metadata;
 using System.Threading.Tasks;
 
 namespace repo_client
@@ -71,7 +70,9 @@ namespace repo_client
             string url = "https://ridomin.github.io/ridomodels/models/";
 
             var wc = new WebClient();
-            var manifest = wc.DownloadString(new Uri(url + $"{folder}/model-manifest.json"));
+            string manifestUrl = url + $"{folder}/model-manifest.json";
+            var manifest = wc.DownloadString(new Uri(manifestUrl));
+            Console.WriteLine("Found:" + manifestUrl);
             var manifestItems = JsonConvert.DeserializeObject<IEnumerable<ManifestItem>>(manifest);
             var root = manifestItems.Where(mi => mi.dtmi == dtmi).FirstOrDefault();
             if (!allModels.ContainsKey(dtmi))
