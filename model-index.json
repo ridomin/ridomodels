@@ -9,7 +9,7 @@
         },
         {
             "dtmi": "dtmi:com:example:Thermostat;1",
-            "path": "models/com-example-thermostat/1.json",
+            "path": "models/com-example-thermostat/thermostat.json",
             "owner": "ridomin"
         },
         {
