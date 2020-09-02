@@ -14,7 +14,7 @@ map['dtmi:from:code;1'] = {
 Object.keys(map).forEach(e => console.log(e))
 
 if (map['dtmi:from:code;1']) {
-    console.log('id found')
+  console.log('id found')
 }
 
 // fs.writeFileSync(file, JSON.stringify(map, null, 2))

@@ -67,13 +67,12 @@ const addModel = (file) => {
     if (!fs.existsSync(folder)) {
       fs.mkdirSync(folder)
     }
+    fs.copyFileSync(file, folder + '/' + path.basename(file))
 
     index[id] = {
       path: folder + '/' + path.basename(file),
       deps: deps
     }
-
-    fs.copyFileSync(file, folder + '/' + path.basename(file))
 
     fs.writeFileSync('model-index.json', JSON.stringify(index, null, 2))
     console.log(`Model ${id} added successfully.`)
