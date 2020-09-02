@@ -1,0 +1,13 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:example:multicomp;1",
+  "@type": "Interface",
+  "displayName": "multicomp",
+  "contents": [
+     {
+       "@type": "Component",
+       "name": "thermostat1",
+       "schema": "dtmi:com:example:mydevice;2"
+     }
+  ]
+}
