@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "repo-client": {
+      "commandName": "Project",
+      "commandLineArgs": "dtmi:azureiot:AzureDeviceUpdateCore;1"
+    }
+  }
+}

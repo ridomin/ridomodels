@@ -1,0 +1,22 @@
+{
+  "dtmi:com:aa;1": {
+    "path": "/models/blaah",
+    "depends": [
+      "aa",
+      "bb"
+    ]
+  },
+  "dtmi:com:ab;1": {
+    "path": "/models/blaah",
+    "depends": [
+      "aa",
+      "bb"
+    ]
+  },
+  "dtmi:from:code;1": {
+    "path": "/vasdva",
+    "depends": [
+      "aa"
+    ]
+  }
+}
