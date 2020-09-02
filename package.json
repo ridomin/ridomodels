@@ -26,6 +26,7 @@
     ]
   },
   "devDependencies": {
+    "@types/mustache": "^4.0.1",
     "standard": "^14.3.4"
   }
 }

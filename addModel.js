@@ -71,7 +71,7 @@ const addModel = (file) => {
 
     index[id] = {
       path: folder + '/' + path.basename(file),
-      deps: deps
+      depends: deps
     }
 
     fs.writeFileSync('model-index.json', JSON.stringify(index, null, 2))

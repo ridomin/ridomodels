@@ -13,32 +13,27 @@
         Resolve Models using the model-manifest.json in each folder
     </div>
     <hr />
-    <div>
-      <input id="dtmiSearchBox" type="text" value="dtmi:com:example:TemperatureController;2" size="50" />
-      <button id="seachDtmiButton">Search</button>
-    </div>
     <div id="rendered">
 
     </div>
     <script id="models-list-template" type="x-tmpl-mustache">
-        <ul>
-          {{^.}}not found{{/.}}
-          {{#.}}
-            <li id="{{dtmi}}">
-              <div>
-              <a href="{{path}}" title="{{dtmi}}" target="_blank">{{dtmi}}</a>
-              </div> 
-              <div class="depends">
-                <ul>
-                  {{#depends}}
-                   <li>{{.}}</li>
-                  {{/depends}}
-                </ul>
-              </div>
-              by {{owner}}
-            </li>
-          {{/.}}
-        </ul>
+      <ul>
+        {{#.}}
+          <span>{{key}}</span>
+          <li id="{{dtmi}}">
+            <div>
+            <a href="{{path}}" title="{{dtmi}}" target="_blank">{{dtmi}}</a>
+            </div> 
+            <div class="depends">
+              <ul>
+                {{#depends}}
+                 <li>{{.}}</li>
+                {{/depends}}
+              </ul>
+            </div>
+          </li>
+        {{/.}}
+      </ul>
     </script>
     <script src="https://unpkg.com/mustache@latest"></script>
     <script src="index.js"></script>

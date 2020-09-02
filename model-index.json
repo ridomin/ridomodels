@@ -20,15 +20,15 @@
   },
   "dtmi:com:base:BaseDevice;1": {
     "path": "models/com-base-basedevice/BaseDevice.json",
-    "deps": []
+    "depends": []
   },
   "dtmi:com:example:mydevice;2": {
     "path": "models/com-example-mydevice/mydevice.json",
-    "deps": []
+    "depends": []
   },
   "dtmi:com:example:multicomp;1": {
     "path": "models/com-example-multicomp/multicomp.json",
-    "deps": [
+    "depends": [
       "dtmi:com:example:mydevice;2"
     ]
   }
