@@ -1,0 +1,23 @@
+# This file can appear in /CODEOWNERS or in /.github/CODEOWNERS
+
+# Global code owners
+* @ridomin # Rido owns everything becuase this is his repo
+
+# Thermostat owners
+models/com-example-thermostat @montgomp
+
+# Temperature controller
+models/com-example-temperaturecontroller @mmydland
+
+# Device information GitHub user name or email can be used
+models/azure-devicemanagement-deviceinformation @mmydland pamontg@microsoft.com
+
+# You can also use wildcards
+models/**/model-manifest.com pamontg@microsoft.com
+
+# you can also restrict to single files
+models/azure-devicemanagement-deviceinformation/deviceinformation.json iliel@microsoft.com
+
+# Order matters, permissions are always additive
+# Please turn on branch protection in sthe Settings/Branches to enforce owners are required to perform code reviews of PR
+# More information can be found at https://github.blog/2017-07-06-introducing-code-owners/
