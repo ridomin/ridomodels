@@ -51,13 +51,11 @@ namespace repo_client
                         Console.WriteLine(i.Value.Id);
                     }
                 }
-
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-
         }
 
         static IDictionary<string, string> allModels = new Dictionary<string, string>();

@@ -21,6 +21,7 @@ const addModel = (file) => {
     process.exit()
   }
   const rootJson = JSON.parse(fs.readFileSync(file, 'utf-8'))
+
   /**
    * @type {modelIndex} index
    */
@@ -37,6 +38,7 @@ const addModel = (file) => {
     if (!fs.existsSync(folder)) {
       fs.mkdirSync(folder)
     }
+
     fs.copyFileSync(file, folder + '/' + path.basename(file))
     index.models.push({
       dtmi: id,
@@ -44,8 +46,9 @@ const addModel = (file) => {
       owner: 'ridomin',
       depends: []
     })
+
     fs.writeFileSync('model-index.json', JSON.stringify(index))
-    console.log('model added successfully')
+    console.log(`model ${id} added successfully.`)
   } else {
     console.error('File is not DTDL 2 interface')
   }
