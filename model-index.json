@@ -31,5 +31,28 @@
     "depends": [
       "dtmi:com:example:mydevice;2"
     ]
+  },
+  "dtmi:com:samples:baseInterface;1": {
+    "path": "models/com-samples-baseinterface/baseInterface.json",
+    "depends": []
+  },
+  "dtmi:com:samples:baseComponent;1": {
+    "path": "models/com-samples-basecomponent/baseComponent.json",
+    "depends": [
+      "dtmi:com:samples:baseInterface;1"
+    ]
+  },
+  "dtmi:com:samples:baseDevice;1": {
+    "path": "models/com-samples-basedevice/BaseDevice.json",
+    "depends": [
+      "dtmi:com:samples:baseComponent;1"
+    ]
+  },
+  "dtmi:com:samples:myDevice;1": {
+    "path": "models/com-samples-mydevice/myDevice.json",
+    "depends": [
+      "dtmi:com:samples:baseDevice;1",
+      "dtmi:com:samples:baseInterface;1"
+    ]
   }
 }
