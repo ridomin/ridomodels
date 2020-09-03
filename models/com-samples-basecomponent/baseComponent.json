@@ -1,0 +1,22 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:samples:baseComponent;1",
+  "@type": "Interface",
+  "extends": "dtmi:com:samples:baseInterface;1",
+  "displayName": "baseComponent",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "publicKey",
+      "schema": "string"
+    },
+    {
+      "@type": "Command",
+      "name": "reset",
+      "request": {
+        "name": "delay",
+        "schema": "integer"
+      }
+    }
+  ]
+}
